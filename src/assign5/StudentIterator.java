@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Created by Windozer on 7/29/2015.
+ * Implements Iterator for the contents of Student so that no changes need to
+ * be made to Student class
+ * @author Matt Sullivan
+ * @author Luis Rocha
  */
 public class StudentIterator implements Iterator<Double> {
     private ArrayList<Double> scores  // scores for the assignments

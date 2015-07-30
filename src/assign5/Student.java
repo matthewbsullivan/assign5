@@ -70,8 +70,7 @@ public class Student extends Observable {
                     if(assignments.get(i)<lowest)
                         lowest = assignments.get(i);
                 }
-            }
-        lowest = -1.0;
+        } else lowest = -1.0;
 
         //call grading interface and get algorithm-determined GPA
         GradingAlgorithm ga;

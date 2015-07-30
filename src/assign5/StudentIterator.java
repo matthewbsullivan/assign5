@@ -4,23 +4,27 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
-  * Implements Iterator<Double> for the contents of Student without
-  * changing Student.
-  * @author Matt Sullivan
-  * @author Luis Rocha
+ * Created by Windozer on 7/29/2015.
  */
 public class StudentIterator implements Iterator<Double> {
     private ArrayList<Double> scores  // scores for the assignments
             = new ArrayList<Double>();
 
     public StudentIterator(Student s){
-        for(int i=0; i < s.getNumberOfAssignments()+s.getNumberOfExams();
-            i++){
+        //Sums up the number of grades to be used by the upcmming for loop.
+        int total_grades = s.getNumberOfAssignments()+s.getNumberOfExams();
+
+        //Loops for the total number of grades.
+        for(int i= 0; i < total_grades; i++){
+            int number = 0;// Used to track the index for getExamScore. Instead of restarting the i int over.
             if(i<s.getNumberOfAssignments()){
-                this.scores.add(i, s.getAssignmentScore(i));
+                //adds all the assignments to the scores arraylist.
+                scores.add(s.getAssignmentScore(i));
             }
-            //else this.scores.add(i, s.getExamScore(i));//works when this is
-            // commented out
+            else {
+                //adds all the exams to the scores arraylist.
+                scores.add(s.getExamScore(number));//works when this is
+            }
         }
     }
 

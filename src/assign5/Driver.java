@@ -46,7 +46,7 @@ public class Driver {
 
         //test the StudentIterator using uiMethod
         // <<create an instance to pass to the uiMethod>>
-        StudentIterator studIt = new StudentIterator();
+        StudentIterator studIt = new StudentIterator(student);
         Iterator<Double> si = studIt;
         uiMethod(si);
 

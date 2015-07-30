@@ -51,11 +51,13 @@ public class Driver {
         uiMethod(si);
 
         //test the GradeTracker
-        GradeTracker gt = new GradeTracker(student);
-        System.out.println("letter grade: " + gt.getLetterGrade());
+        GradeTracker gt = new GradeTracker();
+        System.out.println("letter grade: " + gt.getLetterGrade(student,
+                input));
         student.addExamScore(33);
         System.out.println("Added an exam score.");
-        System.out.println("letter grade: " + gt.getLetterGrade());
+        System.out.println("letter grade: " + gt.getLetterGrade(student,
+                input));
 
     }
 }

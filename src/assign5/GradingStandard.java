@@ -1,7 +1,10 @@
 package assign5;
 
 /**
- * Created by Windozer on 7/29/2015.
+ * Implements GradingAlgorithm to create a grading algorithm that uses the
+ * standard weighting.
+ * @author Matt Sullivan
+ * @author Luis Rocha
  */
 public class GradingStandard implements GradingAlgorithm {
     @Override

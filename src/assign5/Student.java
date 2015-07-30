@@ -51,19 +51,34 @@ public class Student extends Observable {
      */
     public double getAverage(int selection) {
         // implement me!
-        GradingAlgorithm ga;
         double assignSum = 0.0,
                 examSum = 0.0;
+        //get the average of assignments
         for (int i = 0; i < assignments.size(); i++){
             assignSum += assignments.get(i);
         }
+        //get the average of exams
         for (int i = 0; i < exams.size(); i++){
             examSum += exams.get(i);
         }
+
+        double lowest;
+        //find lowest assignment grade
+        if (getNumberOfExams()>=2){
+                lowest = assignments.get(0);
+                for (int i = 0; i < assignments.size(); i++){
+                    if(assignments.get(i)<lowest)
+                        lowest = assignments.get(i);
+                }
+            }
+        lowest = -1.0;
+
+        //call grading interface and get algorithm-determined GPA
+        GradingAlgorithm ga;
         GradingSwitch s = new GradingSwitch();
         ga = s.chooseAlgorithm(selection);
         return ga.getAverage(assignSum, getNumberOfAssignments(), examSum,
-                getNumberOfExams(), getLowestAssignment());
+                getNumberOfExams(), lowest);
     }
 
     /**
@@ -95,17 +110,4 @@ public class Student extends Observable {
     public Double getExamScore(int i) {
         return exams.get(i);
     }
-
-    public Double getLowestAssignment(){
-        if (getNumberOfExams()>=2){
-            double lowest = assignments.get(0);
-            for (int i = 0; i < assignments.size(); i++){
-                if(assignments.get(i)<lowest)
-                    lowest = assignments.get(i);
-            }
-            return lowest;
-        }
-        else return -1.0;
-    }
-
 }

@@ -1,7 +1,9 @@
 package assign5;
 
 /**
- * Created by Windozer on 7/29/2015.
+ * GradingSwitch determines which grading algorithm is appropriate
+ * @author Matt Sullivan
+ * @author Luis Rocha
  */
 public class GradingSwitch {
     public GradingAlgorithm chooseAlgorithm(int selection) {

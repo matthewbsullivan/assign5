@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Created by Windozer on 7/29/2015.
+  * Implements Iterator<Double> for the contents of Student without
+  * changing Student.
+  * @author Matt Sullivan
+  * @author Luis Rocha
  */
 public class StudentIterator implements Iterator<Double> {
     private ArrayList<Double> scores  // scores for the assignments
@@ -16,7 +19,7 @@ public class StudentIterator implements Iterator<Double> {
             if(i<s.getNumberOfAssignments()){
                 this.scores.add(i, s.getAssignmentScore(i));
             }
-            else this.scores.add(i, s.getExamScore(i));//works when this is
+            //else this.scores.add(i, s.getExamScore(i));//works when this is
             // commented out
         }
     }

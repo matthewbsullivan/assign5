@@ -1,7 +1,10 @@
 package assign5;
 
 /**
- * Created by Windozer on 7/29/2015.
+ * Implements GradingAlgorithm to create a grading algorithm that uses the
+ * standard weighting, but drops the lowest assignment grade.
+ * @author Matt Sullivan
+ * @author Luis Rocha
  */
 public class GradingDropLowest implements GradingAlgorithm {
     @Override

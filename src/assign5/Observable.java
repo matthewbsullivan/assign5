@@ -1,9 +1,11 @@
 package assign5;
 
-import java.util.ArrayList;
 
 /**
- * Created by Windozer on 7/29/2015.
+  * Not used, but necessary to avoid changing instructor definition of
+  * Student
+  * @author Matt Sullivan
+  * @author Luis Rocha
  */
 public abstract class Observable {
 

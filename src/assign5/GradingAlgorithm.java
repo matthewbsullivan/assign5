@@ -1,7 +1,9 @@
 package assign5;
 
 /**
- * Created by Windozer on 7/29/2015.
+ * Defines a GradingAlgorithm interface
+ * @author Matt Sullivan
+ * @author Luis Rocha
  */
 interface GradingAlgorithm {
     double getAverage(double aSum, int aNum, double eSum, int eNum, double low);
